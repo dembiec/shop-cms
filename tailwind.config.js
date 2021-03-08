@@ -2,10 +2,21 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'cst-gray-1': '#30303d',
+        'cst-gray-2': '#414052',
+        'cst-black': '#181820'
+      },
+      borderWidth: {
+        '5': '5px'
+      }
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderStyle: ['focus'],
+    },
   },
   plugins: [],
 }
