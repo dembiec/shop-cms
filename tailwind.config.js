@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         'cst-gray-1': '#30303d',
         'cst-gray-2': '#414052',
+        'cst-gray-3': '#21212b',
+        'cst-gray-4': '#1b1b24',
         'cst-black': '#181820'
       },
       borderWidth: {
