@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import axios from "axios";
-import ValidationErrors from "./ValidationErrors";
+import ValidationErrors from "../ValidationErrors";
 
 interface State {
     email?: string,
