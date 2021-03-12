@@ -14,6 +14,13 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::view('/{path?}', 'app');
+Route::permanentRedirect('/', '/login');
 
+Route::view('/login', 'app')->name('login');
 Route::post('/login', [AuthController::class, 'login']);
+Route::view('/logout', 'app')->middleware('auth');
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+
+Route::group(['prefix' => '/dashboard', 'middleware' => 'auth'], function () {
+    Route::view('/{path?}', 'app');
+});
