@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ProfileDropDownMenu from "./ProfileDropDownMenu";
+import ProfileDropDownMenu from "./profileDropDownMenu";
 import SwitchMenuButton from "./switchMenuButton";
 
 interface State {

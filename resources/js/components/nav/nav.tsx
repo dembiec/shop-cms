@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import CollapseNav from "../context/collapseNav";
+import CollapseNav from "../../context/collapseNav";
 
 class Nav extends Component
 {
