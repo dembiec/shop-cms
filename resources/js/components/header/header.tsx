@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import ProfileDropDownMenu from "./ProfileDropDownMenu";
-import NotificationDropDownMenu from "./NotificationDropDownMenu";
+import ProfileDropDownMenu from "./profileDropDownMenu";
+import SwitchMenuButton from "./switchMenuButton";
 
 interface State {
     email: string,
@@ -31,9 +31,11 @@ class Header extends Component<{}, State>
         return (
             <header className="fixed top-0 left-0 z-20 w-full h-14 px-7 border-b-2 border-cst-gray-4 bg-cst-gray-3 shadow-sm">
                 <div className="w-full h-full flex flex-row justify-start">
-                    <div className="w-1/3 h-full">
+                    <div className="w-1/4 md:w-1/3 h-full flex flex-row justify-start items-center space-x-6">
+                        <SwitchMenuButton />
+                        <h2 className="hidden md:block text-white">Shop CMS</h2>
                     </div>
-                    <div className="w-2/3 h-full flex flex-row justify-end items-center space-x-6">
+                    <div className="w-3/4 md:w-2/3 h-full flex flex-row justify-end items-center space-x-6">
                         <h2 className="text-white">Hi, {this.state.userName}</h2>
                         <ProfileDropDownMenu userData={this.state.userName} />
                     </div>

@@ -1,4 +1,4 @@
-import React, {ButtonHTMLAttributes, Component, Fragment} from "react";
+import React, {Component, Fragment} from "react";
 import {Md5} from "ts-md5";
 import {Link} from "react-router-dom";
 
@@ -18,7 +18,7 @@ class ProfileDropDownMenu extends Component<Props, State>
 
     menuSwitch = () => {
         this.setState({
-            profileIsOpen: this.state.profileIsOpen ? false : true
+            profileIsOpen: !this.state.profileIsOpen
         });
     }
 
